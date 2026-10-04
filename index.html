@@ -67,7 +67,7 @@
     background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px;
   }
   .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-  .grid2 { display: grid; gap: 16px; grid-template-columns: repeat(2, 1fr); }
+  .grid2 { display: grid; gap: 16px; grid-template-columns: 1fr; }
   .grid2 .card h3 { margin-top: 0; }
   .logo-big { font-size: 28px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 12px; }
   .logo-big span { color: var(--main); }
@@ -100,6 +100,10 @@
   .menu span {
     border: 1px solid var(--line); background: #fff; padding: 6px 14px; border-radius: 99px; font-size: 14px;
   }
+  .menu.col { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .mrow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+  .menu .mt { border-color: var(--main); color: var(--main); font-weight: 700; }
+  .menu .md { color: var(--sub); }
   .menu span em { color: var(--sub); font-style: normal; font-size: 12px; }
   table { width: 100%; border-collapse: collapse; font-size: 15px; }
   th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
@@ -243,19 +247,43 @@
         </div>
       </div>
       <div class="card">
-        <h3>메뉴 구성 <small style="color:var(--sub);font-weight:400">· 4개, 심플하게</small></h3>
-        <div class="menu">
-          <span>Home</span>
-          <span>Profile</span>
-          <span>Project</span>
-          <span>Contact</span>
+        <h3>메뉴 구성</h3>
+        <div class="menu col">
+          <div class="mrow"><span class="mt">About</span><span class="md">나의 소개, 디자인 가치관, 커리어 목표</span></div>
+          <div class="mrow"><span class="mt">Resume</span><span class="md">경력, 학력, 디자인 역량</span></div>
+          <div class="mrow"><span class="mt">Work</span><span class="md">UX/UI 프로젝트와 디자인 작업 과정</span></div>
+          <div class="mrow"><span class="mt">Contact</span><span class="md">채용 및 협업을 위한 연락 정보</span></div>
         </div>
       </div>
       <div class="card">
         <h3>참고 사이트</h3>
-        <div class="menu">
-          <span>카카오뱅크</span>
-          <span>카카오모빌리티</span>
+        <ul class="dots" style="margin-top:14px">
+          <li>천재교육 <a href="https://text.tsherpa.co.kr" target="_blank" rel="noopener" style="font-weight:700;color:var(--ink)">https://text.tsherpa.co.kr</a>
+            <div style="color:#8e8e93;font-weight:400;font-size:14px;line-height:1.5;margin-top:2px">사이트에 처음 들어가면 이미지와 큰 텍스트로 제목이 나타난다. 그후 화면이 전환되며 3개의 박스로 구성된 메뉴가 나타나는 구성, 해당 박스를 클릭했을 때 해당 화면으로 이동하는 것을 참고. 하지만 마우스를 올렸을 때 박스가 흔들거리는 것은 참고 안 함.</div>
+          </li>
+          <li>카카오모빌리티 <a href="https://www.kakaomobility.com" target="_blank" rel="noopener" style="font-weight:700;color:var(--ink)">https://www.kakaomobility.com</a>
+            <div style="color:#8e8e93;font-weight:400;font-size:14px;line-height:1.5;margin-top:2px">첫 화면 아래로 스크롤하면 카카오모빌리티 이야기, 이동기술 이야기, 안전노력 이야기 큰 제목과 자세히보기를 누르면 해당 사이트로 넘어가는 것을 참고</div>
+          </li>
+          <li>카카오뱅크 <a href="https://www.kakaobank.com" target="_blank" rel="noopener" style="font-weight:700;color:var(--ink)">https://www.kakaobank.com</a>
+            <div style="color:#8e8e93;font-weight:400;font-size:14px;line-height:1.5;margin-top:2px">카카오뱅크가 만드는 금융 이야기 아래에 있는 인터랙션 참고</div>
+          </li>
+        </ul>
+        <div style="margin-top:20px;padding-top:16px;border-top:1px dashed var(--line)">
+          <h3 style="margin:0 0 8px;font-size:15px;color:var(--main)">디자인 참고</h3>
+          <ul class="dots">
+          <li><a href="https://www.behance.net/gallery/244818053/Portfolio-2026?tracking_source=search_projects|portfolio&amp;l=149" target="_blank" rel="noopener" style="font-weight:700;color:var(--ink);word-break:break-all">https://www.behance.net/gallery/244818053/Portfolio-2026?tracking_source=search_projects|portfolio&amp;l=149</a>
+            <div style="color:#8e8e93;font-weight:400;font-size:14px;line-height:1.5;margin-top:2px">전체적으로 깔끔한 이미지, 흐름 참고</div>
+          </li>
+          <li><a href="https://www.behance.net/gallery/154225905/UXUI-?tracking_source=search_projects%7Cportfolio+website+ui&amp;l=55" target="_blank" rel="noopener" style="font-weight:700;color:var(--ink);word-break:break-all">https://www.behance.net/gallery/154225905/UXUI-?tracking_source=search_projects%7Cportfolio+website+ui&amp;l=55</a>
+            <div style="color:#8e8e93;font-weight:400;font-size:14px;line-height:1.5;margin-top:2px">전체적인 스타일 참고</div>
+          </li>
+          <li><a href="https://www.behance.net/gallery/226069065/2025-DESIGN-PORTFOLIO?tracking_source=search_projects|웹+사이트+디자인&amp;l=132" target="_blank" rel="noopener" style="font-weight:700;color:var(--ink);word-break:break-all">https://www.behance.net/gallery/226069065/2025-DESIGN-PORTFOLIO?tracking_source=search_projects|웹+사이트+디자인&amp;l=132</a>
+            <div style="color:#8e8e93;font-weight:400;font-size:14px;line-height:1.5;margin-top:2px">전체적인 디자인 느낌 참고</div>
+          </li>
+          <li><a href="https://www.behance.net/gallery/209870635/2023-2024-UXUI-Design-Portfolio-l-UXUI-?tracking_source=search_projects|웹+사이트+디자인&amp;l=157" target="_blank" rel="noopener" style="font-weight:700;color:var(--ink);word-break:break-all">https://www.behance.net/gallery/209870635/2023-2024-UXUI-Design-Portfolio-l-UXUI-?tracking_source=search_projects|웹+사이트+디자인&amp;l=157</a>
+            <div style="color:#8e8e93;font-weight:400;font-size:14px;line-height:1.5;margin-top:2px">텍스트와 디자인 참고</div>
+          </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -310,9 +338,7 @@
 
   <section id="s6">
     <div class="sec-head"><span class="num">06</span><h2>얻고 싶은 것</h2></div>
-    <div class="highlight">
-      완벽하게 만드는 게 목표가 아니라, 내가 직접 기획하고 만든 화면이 실제로 인터넷에 떠 있는 걸 경험하는 게 목표입니다.
-    </div>
+    <div class="card"><p>포트폴리오를 지금의 나를 기록하고 앞으로의 성장을 이어가는 공간으로 만들고자 합니다.<br>작은 경험과 배움을 하나씩 쌓아가며, 천천히 계단을 밟아 나가듯 꾸준히 성장하는 UX/UI 디자이너가 되는 것을 목표로 합니다.</p></div>
   </section>
 
 </main>
